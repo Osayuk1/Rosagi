@@ -1,0 +1,223 @@
+<html><head><base href="https://semino-rossi-tour.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semino Rossi Tour Dates 2024-2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #b30000;
+            text-align: center;
+        }
+        .month {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #b30000;
+            border-bottom: 2px solid #b30000;
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .date {
+            font-weight: bold;
+            color: #b30000;
+        }
+        .venue {
+            font-style: italic;
+        }
+        .city {
+            font-weight: bold;
+        }
+        #tour-map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+        .buy-button {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .buy-button:hover {
+            background-color: #8c0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Semino Rossi Tour Dates 2024-2025</h1>
+    
+    <div class="month">
+        <h2>September 2024</h2>
+        <ul>
+            <li>
+                <span><span class="date">14th:</span> <span class="venue">Stadthalle Stadtallendorf</span>, <span class="city">Marburg</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Marburg', '2024-09-14')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">15th:</span> <span class="venue">Congress Centrum Suhl</span>, <span class="city">Suhl</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Suhl', '2024-09-15')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">21st:</span> <span class="venue">Stadthalle Gersthofen</span>, <span class="city">Augsburg</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Augsburg', '2024-09-21')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">22nd:</span> <span class="venue">Stadthalle Osterode am Harz</span>, <span class="city">Osterode am Harz</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Osterode am Harz', '2024-09-22')">Buy Tickets</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="month">
+        <h2>October 2024</h2>
+        <ul>
+            <li>
+                <span><span class="date">4th:</span> <span class="venue">Alte Mälzerei</span>, <span class="city">Mosbach</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Mosbach', '2024-10-04')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">6th:</span> <span class="venue">Stadthalle Lohr</span>, <span class="city">Lohr</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Lohr', '2024-10-06')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">11th:</span> <span class="venue">Stadthalle Tuttlingen</span>, <span class="city">Tuttlingen</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Tuttlingen', '2024-10-11')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">12th:</span> <span class="venue">Neue Tonhalle</span>, <span class="city">Villingen-Schwenningen</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Villingen-Schwenningen', '2024-10-12')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">13th:</span> <span class="venue">Forum Am Hofgarten</span>, <span class="city">Günzburg</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Günzburg', '2024-10-13')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">14th:</span> <span class="venue">Stadthalle Balingen</span>, <span class="city">Balingen</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Balingen', '2024-10-14')">Buy Tickets</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="month">
+        <h2>November 2024</h2>
+        <ul>
+            <li>
+                <span><span class="date">8th:</span> <span class="venue">Olympiahalle</span>, <span class="city">Innsbruck</span>, Austria</span>
+                <button class="buy-button" onclick="buyTicket('Innsbruck', '2024-11-08')">Buy Tickets</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="month">
+        <h2>December 2024</h2>
+        <ul>
+            <li>
+                <span><span class="date">7th:</span> <span class="venue">Messehalle A</span>, <span class="city">Graz</span>, Austria</span>
+                <button class="buy-button" onclick="buyTicket('Graz', '2024-12-07')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">8th:</span> <span class="venue">Portofino</span>, <span class="city">Vienna</span>, Austria</span>
+                <button class="buy-button" onclick="buyTicket('Vienna', '2024-12-08')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">11th:</span> <span class="venue">Stadthalle Gütersloh</span>, <span class="city">Gütersloh</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Gütersloh', '2024-12-11')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">14th:</span> <span class="venue">Lkh Arena Lüneburg</span>, <span class="city">Lüneburg</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Lüneburg', '2024-12-14')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">16th:</span> <span class="venue">Theater 11</span>, <span class="city">Zürich</span>, Switzerland</span>
+                <button class="buy-button" onclick="buyTicket('Zürich', '2024-12-16')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">17th:</span> <span class="venue">bigBOX Allgäu</span>, <span class="city">Kempten</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Kempten', '2024-12-17')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">18th:</span> <span class="venue">Hugenottenhalle</span>, <span class="city">Neu-Isenburg</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Neu-Isenburg', '2024-12-18')">Buy Tickets</button>
+            </li>
+            <li>
+                <span><span class="date">19th:</span> <span class="venue">Kongress Palais / Stadthalle KS</span>, <span class="city">Kassel</span>, Germany</span>
+                <button class="buy-button" onclick="buyTicket('Kassel', '2024-12-19')">Buy Tickets</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="tour-map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("tour-map"), {
+                zoom: 5,
+                center: { lat: 50.1109, lng: 8.6821 },  // Frankfurt, Germany (roughly central to all locations)
+            });
+
+            const locations = [
+                { lat: 50.9186, lng: 8.9204, title: "Marburg" },
+                { lat: 50.6118, lng: 10.6913, title: "Suhl" },
+                { lat: 48.4214, lng: 10.8540, title: "Augsburg" },
+                { lat: 51.7281, lng: 10.2525, title: "Osterode am Harz" },
+                { lat: 49.3525, lng: 9.1442, title: "Mosbach" },
+                { lat: 49.9957, lng: 9.5750, title: "Lohr" },
+                { lat: 47.9804, lng: 8.8207, title: "Tuttlingen" },
+                { lat: 48.0562, lng: 8.4530, title: "Villingen-Schwenningen" },
+                { lat: 48.4549, lng: 10.2765, title: "Günzburg" },
+                { lat: 48.2772, lng: 8.8508, title: "Balingen" },
+                { lat: 47.2692, lng: 11.4041, title: "Innsbruck" },
+                { lat: 47.0707, lng: 15.4395, title: "Graz" },
+                { lat: 48.2082, lng: 16.3738, title: "Vienna" },
+                { lat: 51.9090, lng: 8.3827, title: "Gütersloh" },
+                { lat: 53.2464, lng: 10.4115, title: "Lüneburg" },
+                { lat: 47.3769, lng: 8.5417, title: "Zürich" },
+                { lat: 47.7238, lng: 10.3106, title: "Kempten" },
+                { lat: 50.0517, lng: 8.6956, title: "Neu-Isenburg" },
+                { lat: 51.3127, lng: 9.4797, title: "Kassel" }
+            ];
+
+            locations.forEach(location => {
+                new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.title
+                });
+            });
+        }
+
+        function buyTicket(city, date) {
+            // This function would typically redirect to a ticket purchasing page
+            // For now, we'll just show an alert
+            alert(`Redirecting to purchase tickets for ${city} on ${date}`);
+        }
+
+        window.onload = initMap;
+    </script>
+</body>
+</html>
