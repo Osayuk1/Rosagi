@@ -84,13 +84,37 @@ li {
 }
 
 /* Tickets Page Styles */
-ul {
-    list-style-type: none;
-    padding-left: 0;
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-li {
-    margin-bottom: 10px;
+.card h2 {
+    color: #b30000;
+    margin: 0 0 10px;
+}
+
+.card p {
+    margin: 0 0 20px;
+}
+
+.card .pay-button {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.card .pay-button:hover {
+    background-color: #8c0000;
 }
 
 .back-button {
