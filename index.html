@@ -1,4 +1,7 @@
-<html><head><base href="https://semino-rossi-tour.com/">
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="https://semino-rossi-tour.com/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semino Rossi Tour Dates 2024-2025</title>
@@ -143,30 +146,6 @@
                 <span><span class="date">8th:</span> <span class="venue">Portofino</span>, <span class="city">Vienna</span>, Austria</span>
                 <button class="buy-button" onclick="buyTicket('Vienna', '2024-12-08')">Buy Tickets</button>
             </li>
-            <li>
-                <span><span class="date">11th:</span> <span class="venue">Stadthalle Gütersloh</span>, <span class="city">Gütersloh</span>, Germany</span>
-                <button class="buy-button" onclick="buyTicket('Gütersloh', '2024-12-11')">Buy Tickets</button>
-            </li>
-            <li>
-                <span><span class="date">14th:</span> <span class="venue">Lkh Arena Lüneburg</span>, <span class="city">Lüneburg</span>, Germany</span>
-                <button class="buy-button" onclick="buyTicket('Lüneburg', '2024-12-14')">Buy Tickets</button>
-            </li>
-            <li>
-                <span><span class="date">16th:</span> <span class="venue">Theater 11</span>, <span class="city">Zürich</span>, Switzerland</span>
-                <button class="buy-button" onclick="buyTicket('Zürich', '2024-12-16')">Buy Tickets</button>
-            </li>
-            <li>
-                <span><span class="date">17th:</span> <span class="venue">bigBOX Allgäu</span>, <span class="city">Kempten</span>, Germany</span>
-                <button class="buy-button" onclick="buyTicket('Kempten', '2024-12-17')">Buy Tickets</button>
-            </li>
-            <li>
-                <span><span class="date">18th:</span> <span class="venue">Hugenottenhalle</span>, <span class="city">Neu-Isenburg</span>, Germany</span>
-                <button class="buy-button" onclick="buyTicket('Neu-Isenburg', '2024-12-18')">Buy Tickets</button>
-            </li>
-            <li>
-                <span><span class="date">19th:</span> <span class="venue">Kongress Palais / Stadthalle KS</span>, <span class="city">Kassel</span>, Germany</span>
-                <button class="buy-button" onclick="buyTicket('Kassel', '2024-12-19')">Buy Tickets</button>
-            </li>
         </ul>
     </div>
 
@@ -189,35 +168,4 @@
                 { lat: 49.9957, lng: 9.5750, title: "Lohr" },
                 { lat: 47.9804, lng: 8.8207, title: "Tuttlingen" },
                 { lat: 48.0562, lng: 8.4530, title: "Villingen-Schwenningen" },
-                { lat: 48.4549, lng: 10.2765, title: "Günzburg" },
-                { lat: 48.2772, lng: 8.8508, title: "Balingen" },
-                { lat: 47.2692, lng: 11.4041, title: "Innsbruck" },
-                { lat: 47.0707, lng: 15.4395, title: "Graz" },
-                { lat: 48.2082, lng: 16.3738, title: "Vienna" },
-                { lat: 51.9090, lng: 8.3827, title: "Gütersloh" },
-                { lat: 53.2464, lng: 10.4115, title: "Lüneburg" },
-                { lat: 47.3769, lng: 8.5417, title: "Zürich" },
-                { lat: 47.7238, lng: 10.3106, title: "Kempten" },
-                { lat: 50.0517, lng: 8.6956, title: "Neu-Isenburg" },
-                { lat: 51.3127, lng: 9.4797, title: "Kassel" }
-            ];
-
-            locations.forEach(location => {
-                new google.maps.Marker({
-                    position: { lat: location.lat, lng: location.lng },
-                    map: map,
-                    title: location.title
-                });
-            });
-        }
-
-        function buyTicket(city, date) {
-            // This function would typically redirect to a ticket purchasing page
-            // For now, we'll just show an alert
-            alert(`Redirecting to purchase tickets for ${city} on ${date}`);
-        }
-
-        window.onload = initMap;
-    </script>
-</body>
-</html>
+                { lat: 48.4549, lng: 10
