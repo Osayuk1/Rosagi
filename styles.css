@@ -1,93 +1,91 @@
-/* Basic Reset */
-* {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background: linear-gradient(to right, #FF6F61, #FFD700);
     color: #333;
-    background-color: #f4f4f4;
 }
 
-/* Header Styling */
 header {
     background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    color: white;
     text-align: center;
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
 }
 
 header h1 {
-    font-size: 2.5em;
     margin: 0;
+    font-size: 2.5em;
 }
 
-/* Main Content Styling */
-main {
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
     padding: 20px;
-}
-
-/* Section Heading */
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Ticket Pricing Section */
-.ticket-pricing {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Ticket Pricing Card */
-.ticket-card {
-    background-color: #fff;
-    border: 2px solid #ccc;
+    background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+}
+
+.month {
+    margin-bottom: 30px;
+}
+
+.month h2 {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
     text-align: center;
+    margin: 0 0 20px 0;
 }
 
-.ticket-card h3 {
-    font-size: 1.5em;
+.card {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     margin-bottom: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s;
 }
 
-.ticket-card p {
-    font-size: 1em;
-    margin-bottom: 20px;
+.card:hover {
+    background: #e0e0e0;
+    transform: scale(1.02);
+}
+
+.card p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.card p.venue {
+    font-style: italic;
     color: #555;
 }
 
-.ticket-card .get-ticket-btn {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1em;
-    transition: background-color 0.3s;
+.card p.date {
+    font-weight: bold;
 }
 
-.ticket-card .get-ticket-btn:hover {
-    background-color: #555;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
 }
