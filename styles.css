@@ -1,3 +1,4 @@
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -12,34 +13,67 @@ header {
     padding: 20px 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #333;
 }
 
-#tour-dates ul, #ticket-tiers {
-    list-style-type: none;
-    padding: 0;
+#tour-dates {
+    padding: 20px;
 }
 
-#tour-dates li, .ticket-tier {
+.tour-month {
+    margin-bottom: 40px;
+}
+
+.tour-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #fff;
+    padding: 15px;
     margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#tickets button {
-    display: block;
-    margin: 20px auto;
+.date {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6347;
+    flex-basis: 15%;
+    text-align: center;
+}
+
+.details {
+    flex-basis: 70%;
+}
+
+.details p {
+    margin: 0;
+    font-size: 18px;
+}
+
+button {
     padding: 10px 20px;
     background-color: #28a745;
     color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-#tickets button:hover {
+button:hover {
     background-color: #218838;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
