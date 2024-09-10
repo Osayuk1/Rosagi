@@ -5,21 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semino Rossi Tickets</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .card h2 {
+            color: #b30000;
+            margin: 0 0 10px;
+        }
+        .card p {
+            margin: 0 0 20px;
+        }
+        .card .pay-button {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .card .pay-button:hover {
+            background-color: #8c0000;
+        }
+    </style>
 </head>
 <body>
-    <h1>Semino Rossi Tickets</h1>
-    
-    <p>Semino Rossi's ticket prices vary depending on the event and location. For his upcoming concerts, you can expect to pay between €34.50 and €91.50 per ticket. Here are some specific prices for his events:</p>
-    
-    <ul>
-        <li><strong>Semino Rossi in Concert - Magische Momente - Live</strong>: from €34.50</li>
-        <li><strong>Semino Rossi - Jubiläumskonzert mit Stargästen</strong>: from €61.50</li>
-        <li><strong>Semino Rossi Feliz Navidad - mit Stargast Sonia Liebing</strong>: ticket prices not available, but you can check the official website for updates</li>
-        <li><strong>Weihnachten mit Semino Rossi & Live-Band</strong>: ticket prices not available, but you can check the official website for updates</li>
-    </ul>
-    
-    <p>Please note that these prices may not include additional fees, such as service charges or shipping costs. I recommend checking the official ticketing websites, like <a href="https://www.oeticket.com" target="_blank">oeticket.com</a>, for the most up-to-date pricing information.</p>
-    
+    <h1>Semino Rossi Ticket Prices</h1>
+
+    <div class="card">
+        <h2>Semino Rossi in Concert - Magische Momente - Live</h2>
+        <p>From €34.50</p>
+        <a href="#" class="pay-button">Pay</a>
+    </div>
+
+    <div class="card">
+        <h2>Semino Rossi - Jubiläumskonzert mit Stargästen</h2>
+        <p>From €61.50</p>
+        <a href="#" class="pay-button">Pay</a>
+    </div>
+
+    <div class="card">
+        <h2>Semino Rossi Feliz Navidad - mit Stargast Sonia Liebing</h2>
+        <p>Check the official website for updates</p>
+        <a href="#" class="pay-button">Pay</a>
+    </div>
+
+    <div class="card">
+        <h2>Weihnachten mit Semino Rossi & Live-Band</h2>
+        <p>Check the official website for updates</p>
+        <a href="#" class="pay-button">Pay</a>
+    </div>
+
     <a href="index.html" class="back-button">Back to Tour Dates</a>
 </body>
 </html>
