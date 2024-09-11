@@ -124,13 +124,10 @@ li {
 
 .checkout-card .section {
     margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
 }
 
 .checkout-card .section:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .checkout-card form {
@@ -195,32 +192,6 @@ li {
 
 .back-button:hover {
     background-color: #8c0000;
-}
-
-/* Input Field Styles */
-.checkout-card .input-group {
-    margin-bottom: 20px;
-}
-
-.checkout-card .input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.checkout-card .input-group input {
-    padding: 12px;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-
-.checkout-card .input-group input:focus {
-    border-color: #b30000;
-    outline: none;
 }
 
 /* Responsive Design */
