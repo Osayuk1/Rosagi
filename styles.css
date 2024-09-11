@@ -23,95 +23,64 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Tour Dates Styles */
-.month {
+/* Checkout Card Styles */
+.checkout-card {
     background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #b30000;
-    border-bottom: 2px solid #b30000;
-    padding-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-li {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.date {
-    font-weight: bold;
-    color: #b30000;
-}
-
-.venue {
-    font-style: italic;
-}
-
-.city {
-    font-weight: bold;
-}
-
-#tour-map {
-    width: 100%;
-    height: 400px;
-    margin-top: 20px;
-}
-
-/* Button Styles */
-button, .buy-button, .pay-button, .back-button {
-    background-color: #b30000;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-
-button:hover, .buy-button:hover, .pay-button:hover, .back-button:hover {
-    background-color: #8c0000;
-}
-
-/* Tickets Page Styles */
-.card {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 50px 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
-.card h2 {
+.checkout-card h2 {
     color: #b30000;
-    margin: 0 0 10px;
+    margin-bottom: 20px;
 }
 
-.card p {
-    margin: 0 0 20px;
+.checkout-card form {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Checkout Form Styles */
+.checkout-card label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.checkout-card input[type="text"],
+.checkout-card input[type="email"],
+.checkout-card input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.checkout-card input[type="text"]:focus,
+.checkout-card input[type="email"]:focus,
+.checkout-card input[type="number"]:focus {
+    border-color: #b30000;
+    outline: none;
+}
+
 .checkout-button {
     background-color: #b30000;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 18px;
     transition: background-color 0.3s ease;
 }
 
@@ -127,8 +96,46 @@ button:hover, .buy-button:hover, .pay-button:hover, .back-button:hover {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
+    margin-top: 20px;
 }
 
 .back-button:hover {
     background-color: #8c0000;
+}
+
+/* Input Field Styles */
+.checkout-card .input-group {
+    margin-bottom: 15px;
+}
+
+.checkout-card .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.checkout-card .input-group input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.checkout-card .input-group input:focus {
+    border-color: #b30000;
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .checkout-card {
+        padding: 20px;
+    }
 }
