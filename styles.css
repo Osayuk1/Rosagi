@@ -69,17 +69,19 @@ li {
     margin-top: 20px;
 }
 
-.buy-button {
+/* Button Styles */
+button, .buy-button, .pay-button, .back-button {
     background-color: #b30000;
     color: white;
     border: none;
-    padding: 8px 15px;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
-.buy-button:hover {
+button:hover, .buy-button:hover, .pay-button:hover, .back-button:hover {
     background-color: #8c0000;
 }
 
@@ -100,34 +102,4 @@ li {
 
 .card p {
     margin: 0 0 20px;
-}
-
-.card .pay-button {
-    background-color: #b30000;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-
-.card .pay-button:hover {
-    background-color: #8c0000;
-}
-
-.back-button {
-    display: inline-block;
-    background-color: #b30000;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 20px;
-    text-decoration: none;
-}
-
-.back-button:hover {
-    background-color: #8c0000;
 }
