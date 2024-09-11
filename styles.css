@@ -104,6 +104,21 @@ button:hover, .buy-button:hover, .pay-button:hover, .back-button:hover {
     margin: 0 0 20px;
 }
 
+/* Checkout Form Styles */
+.checkout-button {
+    background-color: #b30000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #8c0000;
+}
+
 .back-button {
     display: inline-block;
     background-color: #b30000;
@@ -111,7 +126,6 @@ button:hover, .buy-button:hover, .pay-button:hover, .back-button:hover {
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
-    margin-top: 20px;
     text-decoration: none;
 }
 
