@@ -3,81 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Semino Rossi Tickets</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .checkout-form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            margin: 50px auto;
-        }
-        .checkout-form h2 {
-            color: #b30000;
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .checkout-form .pay-button {
-            width: 100%;
-            background-color: #b30000;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-        }
-        .checkout-form .pay-button:hover {
-            background-color: #8c0000;
-        }
-    </style>
 </head>
 <body>
 
-    <div class="checkout-form">
-        <h2>Checkout</h2>
-        <form action="#">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-                <label for="card">Card Number</label>
-                <input type="text" id="card" name="card" placeholder="Enter your card number" required>
-            </div>
-            <div class="form-group">
-                <label for="expiry">Expiry Date</label>
-                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
-            </div>
-            <div class="form-group">
-                <label for="cvc">CVC</label>
-                <input type="text" id="cvc" name="cvc" placeholder="CVC" required>
-            </div>
-            <a href="#" class="pay-button">Complete Purchase</a>
-        </form>
-    </div>
-    <a href="javascript:history.back()" class="back-button">Go Back</a>
-        </form> 
-    </div>
+    <h1>Checkout Page</h1>
+    <form id="checkout-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="card">Credit Card Number:</label>
+        <input type="text" id="card" name="card" required><br><br>
+
+        <label for="expiry">Expiry Date:</label>
+        <input type="month" id="expiry" name="expiry" required><br><br>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required><br><br>
+
+        <button type="submit" class="checkout-button">Complete Checkout</button>
+    </form>
+
+    <a href="index.html" class="back-button">Back to Home</a>
+
+    <script src="checkout.js"></script>
 
 </body>
 </html>
