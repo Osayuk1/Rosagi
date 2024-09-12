@@ -1,4 +1,5 @@
-/* Common Styles */
+/* General Styles for the rest of the site */
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -21,22 +22,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-/* Button Styles */
-button, .buy-button, .pay-button, .back-button, .checkout-button {
-    background-color: #b30000;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-
-button:hover, .buy-button:hover, .pay-button:hover, .back-button:hover, .checkout-button:hover {
-    background-color: #8c0000;
 }
 
 /* Tour Dates Styles */
@@ -85,6 +70,22 @@ li {
     margin-top: 20px;
 }
 
+/* Button Styles */
+button, .buy-button, .back-button {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+button:hover, .buy-button:hover, .back-button:hover {
+    background-color: #8c0000;
+}
+
 /* Tickets Page Styles */
 .card {
     background-color: #fff;
@@ -102,105 +103,4 @@ li {
 
 .card p {
     margin: 0 0 20px;
-}
-
-/* Checkout Card Styles */
-.checkout-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    margin: 30px 0;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.checkout-card h2 {
-    color: #b30000;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-.checkout-card .section {
-    margin-bottom: 20px;
-}
-
-.checkout-card .section:last-child {
-    margin-bottom: 0;
-}
-
-.checkout-card form {
-    display: flex;
-    flex-direction: column;
-}
-
-.checkout-card label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.checkout-card input[type="text"],
-.checkout-card input[type="email"],
-.checkout-card input[type="number"] {
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-
-.checkout-card input[type="text"]:focus,
-.checkout-card input[type="email"]:focus,
-.checkout-card input[type="number"]:focus {
-    border-color: #b30000;
-    outline: none;
-}
-
-.checkout-button {
-    background-color: #b30000;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-    text-transform: uppercase;
-    margin-top: 20px;
-}
-
-.checkout-button:hover {
-    background-color: #8c0000;
-}
-
-.back-button {
-    display: inline-block;
-    background-color: #b30000;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-.back-button:hover {
-    background-color: #8c0000;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-    
-    .checkout-card {
-        padding: 20px;
-    }
 }
