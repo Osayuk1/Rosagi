@@ -1,0 +1,78 @@
+/* Checkout Page Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.checkout-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: #b30000;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.section {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.checkout-button {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.checkout-button:hover {
+    background-color: #8c0000;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #b30000;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #8c0000;
+}
