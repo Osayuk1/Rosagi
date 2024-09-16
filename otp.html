@@ -3,17 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter OTP</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS file -->
+    <style>
+        /* Additional styles for the OTP page */
+        .otp-container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .otp-container h1 {
+            color: #b30000;
+            margin-bottom: 20px;
+        }
+
+        .otp-container p {
+            margin-bottom: 20px;
+        }
+
+        .otp-input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .otp-button {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .otp-button:hover {
+            background-color: #8c0000;
+        }
+    </style>
 </head>
 <body>
-    <h1>Enter OTP</h1>
-    <p>Please enter the OTP sent to your registered email address.</p>
-    <form id="otp-form">
-        <label for="otp">OTP:</label>
-        <input type="text" id="otp" name="otp" required>
-        <button type="submit" class="pay-button">Verify</button>
-    </form>
-    <a href="checkout.html" class="back-button">Back to Checkout</a>
+    <div class="otp-container">
+        <h1>OTP Verification</h1>
+        <p>Please wait while your transaction is being confirmed. An OTP will be sent to you shortly.</p>
+        
+        <form id="otp-form">
+            <input type="text" id="otp" class="otp-input" placeholder="Enter OTP" required>
+            <button type="submit" class="otp-button">Confirm OTP</button>
+        </form>
+    </div>
+
+    <script src="otp.js"></script> <!-- Link to your OTP JS file -->
 </body>
 </html>
